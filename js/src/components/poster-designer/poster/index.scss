@@ -1,0 +1,19 @@
+.qs-poster-main-panel{
+    .qs-poster{
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+
+        .qs-poster-blank{
+            width: 600px;
+            height: 300px;
+        }
+
+        .qs-poster-img{
+            max-width: 1200px;
+            max-height: 1200px;
+        }
+    }
+}

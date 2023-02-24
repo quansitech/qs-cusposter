@@ -1,0 +1,15 @@
+.qs-poster-main-panel{
+    .qs-poster-align-wrap{
+        display: flex;
+        align-items: center;
+        
+        .ant-radio-group{
+            display: flex;
+
+            .ant-radio-button-wrapper{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

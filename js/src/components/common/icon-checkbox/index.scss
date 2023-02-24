@@ -1,0 +1,24 @@
+.qs-poster-main-panel{
+    .qs-poster-icon-checkbox-checked{
+        font-size: 18px;
+        color:#000;
+        background-color: hsl(210, 1%, 69%);
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .qs-poster-icon-checkbox{
+        color: #000;
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        padding: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

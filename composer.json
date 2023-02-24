@@ -1,0 +1,28 @@
+{
+  "name": "quansitech/qs-cusposter",
+  "description": "qscmf cus-poster",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "tiderjian",
+      "email": "tider@quansitech.com"
+    }
+  ],
+  "require": {
+    "php": ">=8",
+    "tiderjian/think-core": ">=12"
+  },
+  "autoload": {
+    "psr-4": {
+      "QsCusPoster\\": "src"
+    }
+  },
+  "extra": {
+    "qscmf": {
+      "providers": [
+        "QsCusPoster\\CusPosterProvider"
+      ]
+    }
+  }
+}

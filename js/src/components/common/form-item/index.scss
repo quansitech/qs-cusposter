@@ -1,0 +1,21 @@
+.qs-poster-main-panel{
+    .qs-poster-form-item{
+        clear:both;
+        display: flex;
+        margin-left: 5px;
+        margin-top: 6px;
+
+        .qs-poster-form-item-label{
+            width: 30%;
+            font-size: 14px;
+            line-height: 30px;
+            color: #7a7878;
+        }
+
+        .qs-poster-form-item-content{
+            display: flex;
+            align-items: center;
+            width: 70%;
+        }
+    }
+}

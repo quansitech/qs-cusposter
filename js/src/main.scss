@@ -1,0 +1,44 @@
+.qs-poster-main-panel {
+    height: 100%;
+
+    & > .qs-poster-main-panel-header{
+        display: flex;
+        justify-content: flex-end;
+        padding: 3px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+
+    & > .qs-poster-workbench{
+        border-left: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+        border-bottom: 1px solid #d9d9d9;
+        height: calc(100% - 35px);
+        display: flex;
+    }
+
+    .qs-poster-node-thumb{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .thumb-icon{
+            width: 30px;
+            height: 30px;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #838383;
+        }
+
+        
+    }
+
+    .qs-poster-node-thumb:hover{
+        span{
+            color: hsl(208, 75%, 52%);
+        }
+    }
+}
