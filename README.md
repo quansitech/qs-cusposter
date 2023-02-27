@@ -47,6 +47,10 @@ $builder->setNIDByNode("admin", "poster", "index")
 $builder = new \QsCusPoster\CusPosterBuilder($posterData);
 //假如有使用自定义变量组件，通过该方法来设定变量值
 $builder->setVarValue("companyName", "张三")
+//设置生成canvas宽度，不设置的话则保持原图的宽度
+->setWidth(300)
+//设置生成canvas高度，不设置的话则保持原图的高度
+->setHeight(300)
 ->setVarValue("companyType", "民营企业")
 ->build();
 ```
