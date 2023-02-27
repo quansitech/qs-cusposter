@@ -4,6 +4,7 @@
 
 ## 效果
 
+![](https://github.com/quansitech/files/blob/master/qs-cusposter-sample.png)
 
 ## 安装
 
