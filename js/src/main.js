@@ -171,6 +171,7 @@ const App = ({dom, options, nodes}) => {
 //     }
 // ];
 
+// // // 调试则要取消这部分注释
 // const root = ReactDOM.createRoot(document.getElementById('qs-poster-app'));
 // root.render(<App dom={document.getElementById('qs-poster-app')} options={options} nodes={nodes} />);
 

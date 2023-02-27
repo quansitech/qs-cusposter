@@ -17,7 +17,7 @@ class CusPosterBuilder{
         return $this;
     }
 
-    public function build() : string{
+    public function genData() : array{
         $data = collect($this->data)->map(function($item){
             if($item['component'] == 'Var'){
                 $var_name = substr($item['value']['text'], 1, strlen($item['value']['text']) - 1);
@@ -25,6 +25,11 @@ class CusPosterBuilder{
             }
             return $item;
         })->toArray();
+        return $data;
+    }
+
+    public function build() : string{
+        $data = $this->genData();
 
         $gid = Str::uuid()->getHex();
         $nodes = json_encode($data, JSON_PRETTY_PRINT);

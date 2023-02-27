@@ -120,8 +120,8 @@ const PosterRender = ({dom, nodes, width, height}) => {
 // 	}
 // }]
 
-// const root = ReactDOM.createRoot(document.getElementById('qs-poster-app'));
-// root.render(<PosterRender dom={document.getElementById("qs-poster-app")} nodes={nodes} width={100} />);
+const root = ReactDOM.createRoot(document.getElementById('qs-poster-app'));
+root.render(<PosterRender dom={document.getElementById("qs-poster-app")} nodes={nodes} width={100} />);
 
 window['posterRender'] = (dom, nodes, width, height) => {
     ReactDOM.createRoot(dom).render(<PosterRender dom={dom} nodes={nodes} width={width} height={height} />)

@@ -45,10 +45,10 @@ class CusPosterDesignBuilder{
         return $this;
     }
 
-    public function addNodeComponent(string $name, string $node_component, string $title, string $example){
+    public function addVarComponent(string $name, string $title, string $example){
         $this->node_components[] = [
             'name' => $name,
-            'nodeComponent' => $node_component,
+            'nodeComponent' => "Var",
             'title' => $title,
             'example' => $example
         ];

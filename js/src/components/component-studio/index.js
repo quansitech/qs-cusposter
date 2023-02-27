@@ -29,8 +29,6 @@ export const ComponentStudio = ({designer}) => {
         else{
             return <></>
         }
-
-       
     }
 
     return <Collapse title="组件">
