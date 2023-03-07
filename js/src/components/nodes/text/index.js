@@ -73,7 +73,7 @@ TextNode.propertySchema = [
                 node.setValue({ ...node.value, ...{color: val}})
             },
             type: 'color',
-            value: '#fffff'
+            value: '#000000'
         }
     },
     {
