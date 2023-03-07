@@ -72,7 +72,8 @@ VarNode.propertySchema = [
             onChange: (node, val) => {
                 node.setValue({ ...node.value, ...{color: val}})
             },
-            type: 'color'
+            type: 'color',
+            value: '#fffff'
         }
     },
     {
