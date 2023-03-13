@@ -76,7 +76,7 @@ const App = ({dom, options, nodes}) => {
 //             "name": "publishDate",
 //             "nodeComponent": "Var",
 //             "title": "\u53d1\u8bc1\u65e5\u671f",
-//             "example": "\u4e8c\u96f6\u4e8c\u4e09\u5e74\u56db\u6708"
+//             "example": "二零二三年十二月二十三日"
 //         },
 //         {
 //             "name": "editionLevel",
@@ -111,7 +111,7 @@ const App = ({dom, options, nodes}) => {
 //         "id": "l7pckkaxbit",
 //         "component": "Var",
 //         "value": {
-//             "fontSize": "14",
+//             "fontSize": "14px",
 //             "align": "middle",
 //             "fontWeight": "unset",
 //             "fontStyle": "unset",
@@ -144,7 +144,7 @@ const App = ({dom, options, nodes}) => {
 //         "id": "gwgslezcgak",
 //         "component": "Var",
 //         "value": {
-//             "fontSize": "16",
+//             "fontSize": "16px",
 //             "align": "middle",
 //             "fontWeight": "bold",
 //             "fontStyle": "unset",
@@ -158,7 +158,7 @@ const App = ({dom, options, nodes}) => {
 //         "id": "ddzt0eiuph2",
 //         "component": "Var",
 //         "value": {
-//             "fontSize": "16",
+//             "fontSize": "16px",
 //             "align": "middle",
 //             "fontWeight": "bold",
 //             "fontStyle": "unset",
@@ -170,7 +170,7 @@ const App = ({dom, options, nodes}) => {
 //         }
 //     }
 // ];
-//
+
 // // // 调试则要取消这部分注释
 // const root = ReactDOM.createRoot(document.getElementById('qs-poster-app'));
 // root.render(<App dom={document.getElementById('qs-poster-app')} options={options} nodes={nodes} />);

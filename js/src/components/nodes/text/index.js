@@ -4,11 +4,15 @@ import { genFontSizeOptions } from "@/utils";
 
 const TextNode = observer(({node}) => {
     const defaultStyle = {
-        whiteSpace: 'pre-line',
+        whiteSpace: 'nowrap',
         userSelect: 'none',
+        wordBreak: 'break-all',
+        wordWrap: 'break-word'
     };
 
-    const { position, left, top, ...style} = node.value;
+    const { position, left, top, width, ...style} = node.value;
+
+    style['whiteSpace'] = width ? 'pre-line' : 'nowrap';
 
     return <span style={{...defaultStyle, ...style}}>{node?.value?.text || '固定文本'}</span>
 })
@@ -59,7 +63,7 @@ TextNode.propertySchema = [
             onChange: (node, val) => {
                 node.setValue({ ...node.value, ...{fontSize: val}})
             },
-            value: 14,
+            value: '14px',
             options: genFontSizeOptions()
         }
     },
@@ -109,17 +113,31 @@ TextNode.propertySchema = [
                 italic: true
             }
         }
-    }
+    },
+    {
+        title: '固定宽度',
+        name: 'width',
+        component: 'Input',
+        decorate: 'FormItem',
+        props: {
+            onChange: (node, text) => {
+                node.setValue({ ...node.value, ...{width: text} })
+            },
+            value: '',
+            placeholder: '不填则自适应'
+        }
+    },
     
 ]
 
 
 TextNode.setWrapStyle = (node) => {
-    const { top, left } = node.value;
+    const { top, left, width } = node.value;
     return {
         position: 'absolute',
         top: `${top}px`,
-        left: `${left}px`
+        left: `${left}px`,
+        width: width ? `${width}px` : 'auto'
     }
 }
 

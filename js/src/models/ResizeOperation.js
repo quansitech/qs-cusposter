@@ -42,8 +42,8 @@ export class ResizeOperation{
         if(this.stage === 'resizing'){
             const offsetWidth = x - this.offsetLeft;
             const offsetHeight = y - this.offsetTop;
-            let newWidth = this.originWidth + offsetWidth;
-            let newHeight = this.originHeight + offsetHeight;
+            let newWidth = parseFloat(this.originWidth) + parseFloat(offsetWidth);
+            let newHeight = parseFloat(this.originHeight) + parseFloat(offsetHeight);
             newWidth = newWidth < 0 ? 0 : newWidth;
             newHeight = newHeight < 0 ? 0 : newHeight;
             newWidth = newWidth > this.maxWidth ? this.maxWidth : newWidth;

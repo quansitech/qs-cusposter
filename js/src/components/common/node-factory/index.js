@@ -15,7 +15,6 @@ export const NodeFactory = observer(({node,className, disableStyle, children}) =
             }
 
             for(let entry of entries){
-                
                 node.component.resizeCallback(node, entry.contentRect.width, entry.contentRect.height);
             }
         });

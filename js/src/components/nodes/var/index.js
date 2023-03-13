@@ -4,11 +4,15 @@ import { genFontSizeOptions } from "@/utils";
 
 const VarNode = observer(({node}) => {
     const defaultStyle = {
-        whiteSpace: 'pre-line',
+        whiteSpace: 'nowrap',
         userSelect: 'none',
+        wordBreak: 'break-all',
+        wordWrap: 'break-word'
     };
 
-    const { position, left, top, align, text, referWidth, ...style} = node.value;
+    const { position, left, top, align, text, referWidth, width, ...style} = node.value;
+
+    style['whiteSpace'] = width ? 'pre-line' : 'nowrap';
 
     const getText = () => {
         if(node.designer.mode === 'preview'){
@@ -121,11 +125,24 @@ VarNode.propertySchema = [
                 italic: true
             }
         }
-    }
+    },
+    {
+        title: '固定宽度',
+        name: 'width',
+        component: 'Input',
+        decorate: 'FormItem',
+        props: {
+            onChange: (node, text) => {
+                node.setValue({ ...node.value, ...{width: text} })
+            },
+            value: '',
+            placeholder: '不填则自适应'
+        }
+    },
 ]
 
 VarNode.setWrapStyle = (node) => {
-    const {align, left, top, referWidth} = node.value;
+    const {align, left, top, referWidth, width} = node.value;
     let style = {};
 
     if(node.designer.mode !== 'design'){
@@ -154,7 +171,8 @@ VarNode.setWrapStyle = (node) => {
         ...{
             position: 'absolute',
             top: `${top}px`,
-            left: `${left}px`
+            left: `${left}px`,
+            width: width ? `${width}px` : 'auto'
         },
         ...style
     }
